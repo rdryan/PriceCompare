@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+
+	<LinearLayout
+ 	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+    android:orientation="vertical"
+	android:background="#40ACFF"
+	android:layout_marginTop="8px">	
+	
+		<TextView
+			android:text="Goods1" 
+			android:id="@+id/textView" 
+    		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content"
+			android:background="#DDDDDD"
+			android:layout_marginTop="6px"
+			android:layout_marginLeft="30px"
+    		android:layout_marginRight="10px">
+    	</TextView>
+
+		<LinearLayout
+ 		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="6px">	
+  
+		<TextView
+			android:text="Quantity" 
+			android:id="@+id/textView" 
+    		android:layout_width="110px" 
+    		android:layout_height="wrap_content"
+			android:gravity="right"
+    		android:layout_marginLeft="20px"
+    		android:layout_marginRight="10px">
+    	</TextView>
+    	
+  		<EditText
+			android:id="@+id/Quantity1"
+    		android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+    		android:layout_marginRight="20px"
+			android:inputType="numberDecimal"
+			android:singleLine="true"
+    		android:ems="10" >
+    	</EditText>
+ 		</LinearLayout>   
+ 	
+		<LinearLayout
+ 		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="6px">	
+		
+		<TextView
+			android:text="Total Price" 
+			android:id="@+id/textView" 
+    		android:layout_width="110px" 
+    		android:layout_height="wrap_content"
+			android:gravity="right"
+    		android:layout_marginLeft="20px"
+    		android:layout_marginRight="10px">
+    	</TextView>
+    	
+  		<EditText
+			android:id="@+id/TotalPrice1"
+    		android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+    		android:layout_marginRight="20px"
+			android:inputType="numberDecimal"
+			android:singleLine="true"
+    		android:ems="10" >	 	
+    	</EditText>
+   		</LinearLayout>
+ 	</LinearLayout>   
+
+
+	<LinearLayout
+ 	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+    android:orientation="vertical"
+	android:background="#FF9CFF"
+	android:layout_marginTop="8px">	
+	
+		<TextView
+			android:text="Goods2" 
+			android:id="@+id/textView" 
+    		android:layout_width="wrap_content" 
+    		android:layout_height="wrap_content"
+			android:background="#DDDDDD"
+			android:layout_marginTop="6px"
+    		android:layout_marginLeft="30px"
+    		android:layout_marginRight="10px">
+    	</TextView>
+
+		<LinearLayout
+ 		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="6px">	
+  
+		<TextView
+			android:text="Quantity" 
+			android:id="@+id/textView" 
+    		android:layout_width="110px" 
+    		android:layout_height="wrap_content"
+			android:gravity="right"
+    		android:layout_marginLeft="20px"
+    		android:layout_marginRight="10px">
+    	</TextView>
+    	
+  		<EditText
+			android:id="@+id/Quantity2"
+    		android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="20px"
+			android:inputType="numberDecimal"
+			android:singleLine="true"
+    		android:ems="10" >
+    	</EditText>
+ 		</LinearLayout>   
+ 	
+		<LinearLayout
+ 		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="6px">	
+		
+		<TextView
+			android:text="Total Price" 
+			android:id="@+id/textView" 
+    		android:layout_width="110px" 
+    		android:layout_height="wrap_content"
+			android:gravity="right"
+    		android:layout_marginLeft="20px"
+    		android:layout_marginRight="10px">
+    	</TextView>
+    	
+  		<EditText
+			android:id="@+id/TotalPrice2"
+    		android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+    		android:layout_marginRight="20px"
+			android:inputType="numberDecimal"
+			android:singleLine="true"
+    		android:ems="10" >	 	
+    	</EditText>
+   		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+ 	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:layout_marginTop="20px">	
+
+		<TextView
+			android:text="" 
+			android:id="@+id/textViewResult" 
+    		android:layout_width="match_parent" 
+    		android:layout_height="wrap_content"
+    		android:gravity="center"
+			android:layout_marginTop="10px">
+    	</TextView>
+	</LinearLayout>
+
+    <Button
+        android:id="@+id/CalcButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="30px"
+		android:layout_marginLeft="10px"
+		android:layout_marginRight="10px"
+        android:text="Compare" >
+    </Button>
+
+
+
+</LinearLayout>
