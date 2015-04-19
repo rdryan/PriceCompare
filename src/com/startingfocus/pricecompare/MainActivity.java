@@ -16,7 +16,6 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	private Button mButtonCompare;
-	private TextView mTextResult;
 	private TextView mQuantity1;
 	private TextView mQuantity2;
 	private TextView mTotalPrice1;
@@ -41,14 +40,13 @@ public class MainActivity extends Activity {
 		mQuantity2 = (TextView)findViewById(R.id.Quantity2);
 		mTotalPrice1 = (TextView)findViewById(R.id.TotalPrice1);
 		mTotalPrice2 = (TextView)findViewById(R.id.TotalPrice2);
-		mTextResult = (TextView)findViewById(R.id.textViewResult);
 		
 		//mQuantity1.setText("123.00");
 		//mQuantity2.setText("100.00");
 		//mTotalPrice1.setText("9.99");
 		//mTotalPrice2.setText("5.99");
 		
-   		am = (AudioManager)this.getSystemService(this.AUDIO_SERVICE);
+   		am = (AudioManager)this.getSystemService(MainActivity.AUDIO_SERVICE);
         snd = new SoundPool(3,AudioManager.STREAM_SYSTEM,5);
         soundcalc = snd.load(this,R.raw.s_calc,0);
         sounderror = snd.load(this,R.raw.s_error,0);
@@ -86,7 +84,6 @@ public class MainActivity extends Activity {
            		
            		if (Quantity1 == 0 || Quantity2 == 0) {
            			Result = "Quantity cannot be zero/empty, please modify it.";
-               		mTextResult.setTextColor(Color.RED);
                		snd.play(sounderror,volumnRatio,volumnRatio,0,0,1);
            		}
            		else {
@@ -95,27 +92,32 @@ public class MainActivity extends Activity {
            			
            			if (UnitPrice1 < UnitPrice2) {
            				Result = "Goods1 is cheaper than Goods2.";
-           		        mTextResult.setTextColor(Color.BLUE);
            			}
            			else if (UnitPrice1 > UnitPrice2) {
-           				Result = "Goods1 is more expensive than Goods2.";
-                   		mTextResult.setTextColor(Color.MAGENTA);
+           				Result = "Goods2 is cheaper than Goods1.";
            			}
            			else {
            				Result = "Goods1 is the same with Goods2.";
-                   		mTextResult.setTextColor(Color.BLACK);
            			}
            			
            			snd.play(soundcalc,volumnRatio,volumnRatio,0,0,1);
            		}           		
 
-           		mTextResult.setTextSize(15);
-           		mTextResult.setText(Result);
-        	}
+           		ShowMsgBox(Result);
+        	}        	
+
         });
 		
 	}
 	
+	public void ShowMsgBox(String msg)
+	{
+		new AlertDialog.Builder(this)
+		.setTitle("Result")
+		.setMessage(msg)
+		.setPositiveButton("OK",null)
+		.show();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -132,9 +134,9 @@ public class MainActivity extends Activity {
 			
 			new AlertDialog.Builder(this)
 			.setTitle("ABOUT")
-			.setMessage("PriceCompare V1.00\n" +
-					"Copyright (c) 2014\n\n" +
-					"http://startingfocus.com\n")
+			.setMessage("Price Compare V1.00\n" +
+					"Copyright (c) 2015\n\n" +
+					"rdryan@sina.com\n")
 			.setPositiveButton("OK",null)
 			.show();
 		}
