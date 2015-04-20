@@ -9,11 +9,10 @@
  	android:layout_width="fill_parent" 
 	android:layout_height="wrap_content"
     android:orientation="vertical"
-	android:background="#40ACFF"
 	android:layout_marginTop="8dp">	
 	
 		<TextView
-			android:text="Goods1"
+			android:text="--Goods1--"
 			android:layout_gravity="center_horizontal"
 			android:id="@+id/textView1" 
     		android:layout_width="wrap_content" 
@@ -21,14 +20,14 @@
 			android:layout_marginTop="6dp">
     	</TextView>
 
-
     	
   		<EditText
 			android:id="@+id/Quantity1"
-			android:hint="Quantity"
+			android:hint="Quantity (Kg/L/Oz)"
     		android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-    		android:layout_marginRight="20dp"
+    		android:layout_marginRight="30dp"
+    		android:layout_marginLeft="30dp"
 			android:inputType="numberDecimal"
 			android:singleLine="true"
     		android:ems="10" >
@@ -37,10 +36,11 @@
     	
   		<EditText
 			android:id="@+id/TotalPrice1"
-			android:hint="Total Price"
+			android:hint="Total Price ($/£/€/¥/)"
     		android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-    		android:layout_marginRight="20dp"
+    		android:layout_marginRight="30dp"
+    		android:layout_marginLeft="30dp"
 			android:inputType="numberDecimal"
 			android:singleLine="true"
     		android:ems="10" >	 	
@@ -53,11 +53,10 @@
  	android:layout_width="fill_parent" 
 	android:layout_height="wrap_content"
     android:orientation="vertical"
-	android:background="#FF9CFF"
-	android:layout_marginTop="8dp">	
+	android:layout_marginTop="25dp">	
 	
 		<TextView
-			android:text="Goods2"
+			android:text="--Goods2--"
 			android:layout_gravity="center_horizontal"
 			android:id="@+id/textView2"
     		android:layout_width="wrap_content" 
@@ -66,13 +65,13 @@
     	</TextView>
 
 
-    	
   		<EditText
 			android:id="@+id/Quantity2"
-			android:hint="Quantity"
+			android:hint="Quantity (Kg/L/Oz)"
     		android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_marginRight="20dp"
+    		android:layout_marginRight="30dp"
+    		android:layout_marginLeft="30dp"
 			android:inputType="numberDecimal"
 			android:singleLine="true"
     		android:ems="10" >
@@ -81,10 +80,11 @@
     	
   		<EditText
 			android:id="@+id/TotalPrice2"
-			android:hint="Total Price"
+			android:hint="Total Price ($/£/€/¥)"
     		android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-    		android:layout_marginRight="20dp"
+    		android:layout_marginRight="30dp"
+    		android:layout_marginLeft="30dp"
 			android:inputType="numberDecimal"
 			android:singleLine="true"
     		android:ems="10" >	 	
@@ -97,8 +97,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 		android:layout_marginTop="30dp"
-		android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
+    	android:layout_marginRight="30dp"
+    	android:layout_marginLeft="30dp"
         android:text="Compare" >
     </Button>
 
